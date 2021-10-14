@@ -3,14 +3,20 @@
 body{
   background-color:skyblue
 }
+
 button{
-  color:blue
+  color:blue;
   font-family:Times;
-  border-radius:20px
-};
-btnA{
-  background-color:yellow
+  border-radius:20px;
 }
+
+#btnA{
+  background-color:yellow;
+  color:green;
+  font-weight:bold;
+
+}
+
     #minuteStr {
         color: #ff0000;
         font-size: 20px;
