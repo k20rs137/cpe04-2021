@@ -2,13 +2,13 @@
 
 body{
   background-color:skyblue;
+  
 }
 
 button{
   background-color:yellow;
-  color:blue;
-  font-family:Times;
-  border-radius:20px;
+  font-family:fantasy;
+  border-radius:10px;
 
 }
   
@@ -24,6 +24,9 @@ button{
 #btnC{
   color:black;
   font-weight:2em;
+}
+#btnD{
+  color:blue;
 }
 #time{
   box-shadow:5px 5px 5px;
