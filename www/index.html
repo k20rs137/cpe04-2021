@@ -39,9 +39,7 @@
             btnCClick(e);
         });
 
-         $('#btnD').click(function(e) {
-            btnDClick(e);
-        });
+        
         init();
     });
     
@@ -224,28 +222,12 @@
         
     }
 
-    function btnDClick(e){
-      active=true;
-      
-      
-      
-     
-        
-
-     
-
-    }
+    
     
  
     // 繰り返し実行する処理
     function timer(){  
-      if(btnBClick==f){
-        var time=parseInt((new Date()-startTime)/1000);
-        var rest =period-time;
-        $("#time").html("経過時間:"+time);
-        $("#remain").html("残り時間:"+rest);
-        analog(rest);
-      }else{
+      if(active){
         var time=parseInt((new Date()-startTime)/1000);
         var rest =period-time;
         $("#time").html("経過時間:"+time);
@@ -272,7 +254,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>
-    <button id="btnD">Restart</button>  
+      
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>
