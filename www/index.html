@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="keys.js"></script>
   <style>
 
   </style>
@@ -152,6 +153,11 @@
 
 
     // 変数宣言
+
+    var ncmb =new NCMB(appKey,clientKey);
+    var RTdata = ncmb.DataStore("RapTime");
+    var rapTime=new RTdata();
+
     var active =false;
     var startTime=0;
     var period=0;
@@ -193,6 +199,20 @@
         
     }
     
+    function TimeRap(score){
+      var GameScore = ncmb.DataStore("TimeRap");
+      var gameScore = new GameScore();
+
+      gameScore.set("Rap",score);
+
+      gameScore.save()
+        .then(function(){
+           console.log("保存に成功しました。");
+        })
+        .catch(function (error) {
+           console.log("保存に失敗しました。エラー:" + error);
+    });
+    }
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
       active=true;
@@ -221,6 +241,12 @@
        
         
     }
+
+    function btnDClick(e){
+      
+    }
+
+
 
     
     
@@ -254,6 +280,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>
+    <button id="btnD">Rap</button>
       
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
